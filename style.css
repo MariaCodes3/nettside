@@ -1,11 +1,11 @@
 @import 'https://fonts.googleapis.com/css?family=times:300, 400, 700&display=swap';
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+	padding: 100;
+	
 }
 html {
 	font-size: 10px;
+	font-family: 'times', sans-serif;
 	scroll-behavior: smooth;
 }
 a {
@@ -32,34 +32,28 @@ p {
 	letter-spacing: 0.05rem;
 }
 .section-title {
-	font-size: 4rem;
+	font-size: 2rem;
 	font-weight: 300;
 	color: black;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
 	text-align: center;
+
+}
+.section-undertitle {
+	font-size: 1.3rem;
+	font-weight: 200;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	text-align: left;
 }
 .section-title span {
-	color: crimson;
-}
+	color: rgb(92, 95, 160);
 
-.cta {
-	display: inline-block;
-	padding: 10px 30px;
-	color: white;
-	background-color: transparent;
-	border: 2px solid navy;
-	font-size: 2rem;
-	text-transform: uppercase;
-	letter-spacing: 0.1rem;
-	margin-top: 30px;
-	transition: 0.3s ease;
-	transition-property: background-color, color;
-}
-.cta:hover {
-	color: pink;
-	background-color: rgb(129, 69, 156);
+
 }
 .brand h1 {
 	font-size: 3rem;
@@ -67,22 +61,23 @@ p {
 	color: white;
 }
 .brand h1 span {
-	color: crimson;
+	color: rgb(92, 95, 160);
 }
 
-/* Header seksjonen */ 
+/* Header seksjonen */
 #header {
-	position: fixed;
+	position: absolute;
 	z-index: 1000;
-	left:0;
+	left: 0;
 	top: 0;
 	width: 100vw;
 	height: auto;
 }
+
 #header .header {
 	min-height: 8vh;
 	background-color: rgba(31, 30, 30, 0.24);
-	transition: 0.3s ease background-color;
+	
 }
 #header .nav-bar {
 	display: flex;
@@ -92,25 +87,7 @@ p {
 	height: 100%;
 	max-width: 1300px;
 	padding: 0 10px;
-}
-#header .nav-list ul {
-	list-style: none;
-	position: absolute;
-	background-color: rgb(31, 30, 30);
-	width: 100vw;
-	height: 100vh;
-	left: 100%;
-	top: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
-	overflow-x: hidden;
-	transition: 0.5s ease left;
-}
-#header .nav-list ul.active {
-	left: 0%;
+
 }
 #header .nav-list ul a {
 	font-size: 2.5rem;
@@ -121,91 +98,23 @@ p {
 	text-transform: uppercase;
 	padding: 20px;
 	display: block;
-}
-#header .nav-list ul a::after {
-	content: attr(data-after);
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%) scale(0);
-	color: rgba(240, 248, 255, 0.021);
-	font-size: 13rem;
-	letter-spacing: 50px;
-	z-index: -1;
-	transition: 0.3s ease letter-spacing;
-}
-#header .nav-list ul li:hover a::after {
-	transform: translate(-50%, -50%) scale(1);
-	letter-spacing: initial;
+
 }
 #header .nav-list ul li:hover a {
-	color: crimson;
-}
-#header .hamburger {
-	height: 60px;
-	width: 60px;
-	display: inline-block;
-	border: 3px solid white;
-	border-radius: 50%;
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	z-index: 100;
-	cursor: pointer;
-	transform: scale(0.8);
-	margin-right: 20px;
-}
-#header .hamburger:after {
-	position: absolute;
-	content: '';
-	height: 100%;
-	width: 100%;
-	border-radius: 50%;
-	border: 3px solid white;
-	animation: hamburger_puls 1s ease infinite;
-}
-#header .hamburger .bar {
-	height: 2px;
-	width: 30px;
-	position: relative;
-	background-color: white;
-	z-index: -1;
-}
-#header .hamburger .bar::after,
-#header .hamburger .bar::before {
-	content: '';
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	left: 0;
-	background-color: white;
-	transition: 0.3s ease;
-	transition-property: top, bottom;
-}
-#header .hamburger .bar::after {
-	top: 8px;
-}
-#header .hamburger .bar::before {
-	bottom: 8px;
-}
-#header .hamburger.active .bar::before {
-	bottom: 0;
-}
-#header .hamburger.active .bar::after {
-	top: 0;
+	color: rgb(92, 95, 160);
+
 }
 /* slutt på Header seksjonen */
 
-/* Hero Seksjon */
-#hero {
-	background-image: url(https://th.bing.com/th/id/R.5795dc5a2ef780ae1c755e60b1164892?rik=8Ibq26muy5ahpA&riu=http%3a%2f%2fplumvillage.org%2fwp-content%2fuploads%2f2007%2f10%2fpolar-bear-on-receding-ice.jpg&ehk=DFB773udAGGylsgBFmA%2f50u59VtFuX1FT3Nh1bFVjUA%3d&risl=&pid=ImgRaw&r=0);
+/* Hjem Seksjon */
+#hjem {
+	background-image: url(https://managersoffice.net/wp-content/uploads/2020/10/Polar-bears-now-eat-dolphins-thanks-to-global-warming-PHOTO.jpg);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
 	z-index: 1;
 }
-#hero::after {
+#hjem::after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -216,73 +125,43 @@ p {
 	opacity: 0.7;
 	z-index: -1;
 }
-#hero .hero {
+#hjem .hjem {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 50px;
 	justify-content: flex-start;
 }
-#hero h1 {
+#hjem h1 {
 	display: block;
 	width: fit-content;
 	font-size: 4rem;
 	position: relative;
-	color: transparent;
-	animation: text_reveal 0.5s ease forwards;
-	animation-delay: 1s;
-}
-#hero h1:nth-child(1) {
-	animation-delay: 1s;
-}
-#hero h1:nth-child(2) {
-	animation-delay: 2s;
-}
-#hero h1:nth-child(3) {
-	animation: text_reveal_name 0.5s ease forwards;
-	animation-delay: 3s;
-}
-#hero h1 span {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 0;
-	background-color: maroon;
-	animation: text_reveal_box 1s ease;
-	animation-delay: 0.5s;
-}
-#hero h1:nth-child(1) span {
-	animation-delay: 0.5s;
-}
-#hero h1:nth-child(2) span {
-	animation-delay: 1.5s;
-}
-#hero h1:nth-child(3) span {
-	animation-delay: 2.5s;
+	color: white;
+	
 }
 
-/* slutt på Hero Seksjonen */
+/* slutt på Hjem Seksjonen */
 
-/* Services Seksjon */
-#services .services {
+/* Les mer Seksjon */
+#eksternelinker .eksternelinker {
 	flex-direction: column;
 	text-align: center;
 	max-width: 1500px;
 	margin: 0 auto;
 	padding: 100px 0;
 }
-#services .service-top {
+#eksternelinker .eksternelinker-top {
 	max-width: 500px;
 	margin: 0 auto;
 }
-#services .service-bottom {
+#eksternelinker .eksternelinker-bottom {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
 	margin-top: 50px;
 }
-#services .service-item {
+#eksternelinker .eksternelinker-item {
 	flex-basis: 80%;
 	display: flex;
 	align-items: flex-start;
@@ -290,15 +169,12 @@ p {
 	flex-direction: column;
 	padding: 30px;
 	border-radius: 10px;
-	background-image: url(./img/img-1.png);
-	background-size: cover;
 	margin: 10px 5%;
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
 }
-/* her er det de ikonene*/
-#services .service-item::after {
+#eksternelinker .eksternelinker-item::after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -309,60 +185,83 @@ p {
 	opacity: 0.9;
 	z-index: -1;
 }
-#services .service-bottom .icon {
-	height: 80px;
-	width: 80px;
-	margin-bottom: 20px;
+#eksternelinker .eksternelinker-bottom .icon {
+	height: 70px;
+	width: 70px;
+	margin-bottom: 30px;
 }
-#services .service-item h2 {
-	font-size: 2rem;
+#eksternelinker .eksternelinker-item h2 {
+	font-size: 2.1rem;
 	color: white;
 	margin-bottom: 10px;
-	text-transform: uppercase;
+
+
 }
-#services .service-item p {
+
+/*les mer*/
+
+
+#lesmer .lesmer-item {
+	display: flex;
+	
+}
+#lesmer .lesmer-info {
+	padding: 30px;
+	flex-basis: 50%;
+	height: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 	color: white;
-	text-align: left;
-}
-/* End Services Section */
 
-/* Keyframes */
-@keyframes hamburger_puls {
-	0% {
-		opacity: 1;
-		transform: scale(1);
-	}
-	100% {
-		opacity: 0;
-		transform: scale(1.4);
-	}
 }
-@keyframes text_reveal_box {
-	50% {
+#lesmer .lesmer-info p {
+	color: white;
+}
+#lesmer .lesmer-img {
+	flex-basis: 50%;
+	height: 300px;
+	position: relative;
+}
+#lesmer .lesmer-img:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	opacity: 0.5;
+}
+
+
+	/* Les mer */
+	#lesmer .lesmer-item {
+		flex-direction: row;
+		
+	}
+	#lesmer .lesmer-item:nth-child(even) {
+		flex-direction: row-reverse;
+	}
+	#lesmer .lesmer-item {
+		height: 400px;
+		margin: 0;
 		width: 100%;
-		left: 0;
+		border-radius: 0;
+		overflow: hidden;
 	}
-	100% {
-		width: 0;
-		left: 100%;
+	#lesmer .all-lesmer .lesmer-info {
+		height: 100%;
 	}
-}
-@keyframes text_reveal {
-	100% {
-		color: white;
+	#lesmer .all-lesmer .lesmer-img {
+		height: 100%;
 	}
-}
-@keyframes text_reveal_name {
-	100% {
-		color: maroon;
-		font-weight: 500;
-	}
-}
-/* End Keyframes */
+	/* End Les mer */
 
-/* Media Query For Tablet */
-@media only screen and (min-width: 768px) {
-	.cta {
+
+.cta {
 		font-size: 2.5rem;
 		padding: 20px 60px;
 	}
@@ -370,107 +269,20 @@ p {
 		font-size: 6rem;
 	}
 
-	/* Hero */
-	#hero h1 {
+	/* hjem */
+	#hjem h1 {
 		font-size: 7rem;
 	}
-	/* End Hero */
+	/* End hjem */
 
-	/* Services Section */
-	#services .service-bottom .service-item {
+	/* les mer Section */
+	#eksternelinker .eksternelinker-bottom .eksternelinker-item {
 		flex-basis: 45%;
 		margin: 2.5%;
 	}
-	/* End Services Section */
+	
 
-	/* Project */
-	#projects .project-item {
-		flex-direction: row;
-	}
-	#projects .project-item:nth-child(even) {
-		flex-direction: row-reverse;
-	}
-	#projects .project-item {
-		height: 400px;
-		margin: 0;
-		width: 100%;
-		border-radius: 0;
-	}
-	#projects .all-projects .project-info {
-		height: 100%;
-	}
-	#projects .all-projects .project-img {
-		height: 100%;
-	}
-	/* End Project */
-
-	/* About */
-	#about .about {
-		flex-direction: row;
-	}
-	#about .col-left {
-		width: 600px;
-		height: 400px;
-		padding-left: 60px;
-	}
-	#about .about .col-left .about-img::after {
-		left: -45px;
-		top: 34px;
-		height: 98%;
-		width: 98%;
-		border: 10px solid navy;
-	}
-	#about .col-right {
-		text-align: left;
-		padding: 30px;
-	}
-	#about .col-right h1 {
-		text-align: left;
-	}
-	/* End About */
-
-	/* contact  */
-	#contact .contact {
-		flex-direction: column;
-		padding: 100px 0;
-		align-items: center;
-		justify-content: center;
-		min-width: 20vh;
-	}
-	#contact .contact-items {
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-evenly;
-		margin: 0;
-	}
-	#contact .contact-item {
-		width: 30%;
-		margin: 0;
-		flex-direction: row;
-	}
-	#contact .contact-item .icon {
-		height: 100px;
-		width: 100px;
-	}
-	#contact .contact-item .icon img {
-		object-fit: contain;
-	}
-	#contact .contact-item .contact-info {
-		width: 100%;
-		text-align: left;
-		padding-left: 20px;
-	}
-	/* End contact  */
-}
-/* End Media Query For Tablet */
-
-/* Media Query For Desktop */
-@media only screen and (min-width: 1200px) {
-	/* header */
-	#header .hamburger {
-		display: none;
-	}
+	
 	#header .nav-list ul {
 		position: initial;
 		display: block;
@@ -489,8 +301,151 @@ p {
 	}
 	/* End header */
 
-	#services .service-bottom .service-item {
-		flex-basis: 22%;
-		margin: 1.5%;
-	}
+
+/*tiltak*/
+
+#tiltak .tiltak {
+	flex-direction: column;
+	text-align: center;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 0;
+
 }
+#tiltak .tiltak-item {
+	flex-basis: 80%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	padding: 50px;
+	border-radius: 20px;
+	background-size: cover;
+	margin: 10px 5%;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+#tiltak .tiltak-item {
+	background-color: #485563;
+}
+
+#tiltak .tiltak-item h2 {
+	font-size: 2rem;
+	color: white;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+#tiltak .tiltak-item p {
+	color: white;
+	text-align: left;
+}
+
+/*galleri*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  .container {
+    padding: 40px 5%;
+  }
+  
+  .heading-text {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+
+
+  
+  .image-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+  }
+
+  
+  .image-gallery .column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .image-item img {
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .image-gallery {
+      flex-direction: row;
+    }
+  }
+  
+  /* overlay styles */
+  
+  .image-item {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(57, 57, 57, 0.502);
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: all 0.2s 0.1s ease-in-out;
+    color: #fff;
+ /* center overlay content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* hover */
+  .image-item:hover .overlay {
+    transform: scale(1);
+  }
+  
+
+
+  /*om meg*/
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    align-items: center;
+    margin: auto;
+}
+
+.ommeg-left,
+.ommeg-middle,
+.ommeg-right {
+    flex-basis: 30%;
+    padding: 1.6rem;
+}
+
+
+.ommeg2 {
+    background-color: #3d4752;
+    color: rgb(0, 0, 0);
+}
+
+.ommeg2 .card {
+    padding: 8rem rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 2rem;
+    text-align: center;
+}
+/* om meg*/
